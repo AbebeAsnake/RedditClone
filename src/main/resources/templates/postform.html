@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/post}"
+      th:object="${reddit}"
+      method="post">
+<input type="hidden" th:field="*{id}"/>
+<input type="hidden" th:field="*{dateCreated}"/>
+Add Link:<input type="text" name="link"/><br/>
+Add Title<input type="text" name="title"/><br/>
+    Name <input type="text" name="name"/><br/>
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

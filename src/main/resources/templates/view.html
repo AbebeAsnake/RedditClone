@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/post">Post reddit</a><br/>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Name</th>
+        <th>Link</th>
+        <th>Date created</th>
+
+    </tr>
+    <tr th:each="reddit : ${reddit}">
+        <td th:text="${reddit.title}"></td>
+        <td th:text="${reddit.name}"></td>
+        <a> <td th:text="${reddit.link}"></td></a>
+        <td th:text="${reddit.dateCreated}"></td>
+
+
+
+
+    </tr>
+
+</table>
+</body>
+</html>
