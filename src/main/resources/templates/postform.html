@@ -11,9 +11,12 @@
       method="post">
 <input type="hidden" th:field="*{id}"/>
 <input type="hidden" th:field="*{dateCreated}"/>
-Add Link:<input type="text" name="link"/><br/>
-Add Title<input type="text" name="title"/><br/>
-    Name <input type="text" name="name"/><br/>
+Add Link:<input type="text" th:field="*{link}"/><br/>
+    <br/>
+Add Title<input type="text" th:field="*{title}"/><br/>
+    <br/>
+    Name <input type="text" th:field="*{name}"/><br/>
+   <br/>
     <input type="submit" value="Submit"/>
 </form>
 </body>

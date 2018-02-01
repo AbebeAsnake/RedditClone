@@ -7,21 +7,14 @@
 <body>
 <a href="/post">Post reddit</a><br/>
 <table>
-    <tr>
-        <th>Title</th>
-        <th>Name</th>
-        <th>Link</th>
-        <th>Date created</th>
-
-    </tr>
     <tr th:each="reddit : ${reddit}">
-        <td th:text="${reddit.title}"></td>
-        <td th:text="${reddit.name}"></td>
-        <a> <td th:text="${reddit.link}"></td></a>
-        <td th:text="${reddit.dateCreated}"></td>
+        <a th:href="${reddit.link}" target="_blank"> <span th:text="${reddit.title}"> </span></a><br/>
 
+        created by: <span th:text="${reddit.name}"></span><br/>
 
-
+        <span th:text="${reddit.dateCreated}"></span><br/>
+        <a th:href="@{/update/{id}(id=${reddit.id})}">Update</a>
+        <a th:href="@{/delete/{id}(id=${reddit.id})}">Delete</a><br/>
 
     </tr>
 

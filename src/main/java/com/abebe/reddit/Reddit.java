@@ -10,8 +10,13 @@ import java.util.Date;
 public class Reddit {
     @Id
     @GeneratedValue
-    private int id;
+    private long id;
     private String title;
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
     private String dateCreated;
     private String link;
     private String name;
@@ -25,7 +30,7 @@ public class Reddit {
         this.name = name;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -41,15 +46,15 @@ public class Reddit {
 
         DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
 
-        String formattedDate= dateFormat.format(date);
-        return formattedDate;
+        dateCreated= dateFormat.format(date);
+        return dateCreated;
     }
 
     public String getLink() {
         return link;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
